@@ -49,6 +49,7 @@ Then edit `api/.env`:
 DATABASE_URL=postgresql://USER:PASSWORD@HOST/DB?sslmode=require
 FASTAPI_HOST=127.0.0.1
 FASTAPI_PORT=8000
+JUDGE_API_KEY=replace-with-a-local-shared-key
 ```
 
 > The `DATABASE_URL` placeholder is intentionally invalid — replace
@@ -68,6 +69,11 @@ Then open:
 - <http://127.0.0.1:8000/>             — service index
 - <http://127.0.0.1:8000/health>       — liveness + DB readiness
 - <http://127.0.0.1:8000/docs>         — interactive Swagger UI
+
+The judge runs as a background worker. Next.js creates a pending submission and
+dispatches its ID to `POST /judge`; the worker loads the code and test cases from
+Postgres, executes the submission, and writes the final verdict back. Configure
+`JUDGE_API_KEY` consistently in Next.js and FastAPI before exposing the service.
 
 ## Notes
 
