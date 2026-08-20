@@ -59,9 +59,10 @@ npm install
 ```
 DATABASE_URL="postgresql://..."
 FASTAPI_URL="http://127.0.0.1:8000"
+JUDGE_API_KEY="replace-with-a-local-shared-key"
 ```
 
-Next.js loads `.env.local` automatically. `drizzle-kit` and the FastAPI service load it explicitly.
+Next.js loads `.env.local` automatically. FastAPI loads its configuration only from `api/.env`.
 
 ### 3. Run the dev server
 

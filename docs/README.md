@@ -15,6 +15,7 @@
 | [Project Management](project-management.md) | Team roles, sprint plan, estimation, risk register |
 | [Deployment](deployment.md) | Deployment context, Docker, infrastructure |
 | [Glossary](glossary.md) | Terms and abbreviations |
+| [UI Navigation Flow](UI_nav_flow.md) | Route map, authentication-aware navigation, and primary user journeys |
 
 ## Quick links
 

@@ -36,6 +36,16 @@ class Settings(BaseSettings):
         le=65535,
         description="TCP port the uvicorn server binds to.",
     )
+    JUDGE_API_KEY: str = Field(
+        default="local-development-judge-key",
+        description="Shared key required by the internal judge dispatch endpoint.",
+    )
+    JUDGE_WORKERS: int = Field(
+        default=1,
+        ge=1,
+        le=8,
+        description="Number of concurrent judge workers.",
+    )
 
     @property
     def FASTAPI_URL(self) -> str:

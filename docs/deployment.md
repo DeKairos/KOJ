@@ -48,5 +48,6 @@ Docker Compose:
 | `SUPABASE_URL` | `.env.local` | Supabase project URL |
 | `SUPABASE_ANON_KEY` | `.env.local` | Supabase anonymous key |
 | `REDIS_URL` | `.env` (FastAPI) | Redis connection string |
+| `JUDGE_API_KEY` | `.env.local` and `api/.env` | Shared key for internal judge dispatch |
 
 **Never commit `.env*` files.** They are gitignored.
